@@ -24,3 +24,23 @@ console.log(sumaEdades);
 const nombresPersonajes = personajesSimpsons.map(personaje => personaje.nombre);
 
 console.log(nombresPersonajes);
+
+const personajesEstudiantes = personajesSimpsons.map(({ nombre, edad, rol}) => {
+    return {
+        nombre,
+        edad,
+        rol: edad < 18 ? "Estudiante" : rol
+    };
+})
+
+console.log(personajesEstudiantes);
+
+const nuevosPersonajes = [
+    { nombre: "Apu", edad: 45, rol: "Propietario"},
+    { nombre: "Krusty", edad: 52, rol: "Payaso" },
+    { nombre: "Skinner", edad: 44, rol: "Director"}
+];
+
+const todosLosPersonajes = [...personajesSimpsons, ...nuevosPersonajes];
+
+console.log(todosLosPersonajes);
