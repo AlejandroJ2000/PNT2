@@ -1,9 +1,17 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+  import Navbar from './components/Navbar.vue';
+  import HelloWorld from './components/HelloWorld.vue';
+
+  export default {
+    components: {
+      navbar,
+    }
+  };
 </script>
 
 <template>
   <div>
+    <navbar />
     <a href="https://vite.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -12,6 +20,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <router-view />
 </template>
 
 <style scoped>
