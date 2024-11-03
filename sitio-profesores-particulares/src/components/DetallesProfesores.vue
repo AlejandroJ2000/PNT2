@@ -4,6 +4,12 @@
     <p><strong>Materia:</strong> {{ professor.subject }} </p>
     <p><strong>Descripción:</strong> {{ professor.description }}
     <p><strong>Calificación:</strong> {{ professor.qualification }} / 5</p>
+    <button @click="mostrarFormulario = !mostrarFormulario">
+      {{ mostrarFormulario ? 'Cancelar Reserva' : 'Reservar Tutoría' }}
+    </button>
+    
+    <FormularioRegistro v-if="mostrarFormulario" : professorId="professor.id" />
+
     <button @click="$router.back()">Volver</button>
   </div>
   <p v-else>Cargando datos del profesor...</p>
@@ -11,12 +17,17 @@
 
 <script>
 import axios from 'axios';
+import FormularioRegistro from './FormularioRegistro.vue';
 
 export default {
     name: 'DetallesProfesores',
+    components: {
+      FormularioRegistro,
+    }
     data() {
         return {
             professor: null,
+            mostrarFormulario: false,
         };
     },
     methods: {
