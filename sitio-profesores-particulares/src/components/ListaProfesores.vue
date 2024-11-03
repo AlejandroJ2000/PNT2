@@ -34,7 +34,7 @@ export default {
         }
       },
       verDetalles(professorId) {
-        this.$router.push({ name: 'professorDetails', params: { id: professorId } });
+        this.$router.push({ name: 'detallesProfesores', params: { id: professorId } });
       },
     },
     created() {

@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../components/Home.vue';
+import LoginRegister from '../components/LoginRegister.vue';
+import ListaProfesores from '../components/ListaProfesores.vue';
+import DetallesProfesores from '../components/DetallesProfesores.vue';
 
 const routes = [
     {
@@ -10,8 +13,18 @@ const routes = [
     {
         path: '/login',
         name: 'Login',
-        component: () => import('../components/LoginRegister.vue'),
+        component: LoginRegister,
     },
+    {
+        path: '/profesores',
+        name: 'ListaProfesores',
+        component: ListaProfesores,
+    },
+    {
+        path: '/profesores/:id',
+        name: 'DetallesProfesores',
+        component: DetallesProfesores,
+    }
 ];
 
 const router = createRouter({
