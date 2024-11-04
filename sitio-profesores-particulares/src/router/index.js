@@ -3,6 +3,7 @@ import Home from '../components/Home.vue';
 import LoginRegister from '../components/LoginRegister.vue';
 import ListaProfesores from '../components/ListaProfesores.vue';
 import DetallesProfesores from '../components/DetallesProfesores.vue';
+import PanelAdministrador from '../components/PanelAdministrador.vue';
 
 const routes = [
     {
@@ -24,7 +25,12 @@ const routes = [
         path: '/profesores/:id',
         name: 'DetallesProfesores',
         component: DetallesProfesores,
-    }
+    },
+    {
+        path: '/administrador',
+        name: 'PanelAdministrador',
+        componente: PanelAdministrador;
+    },
 ];
 
 const router = createRouter({

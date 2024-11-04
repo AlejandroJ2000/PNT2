@@ -34,7 +34,7 @@ export default {
         async obtenerDetallesProfesor() {
           try {
             const professorId = this.$route.params.id;
-            const response = await axios.get(`https://mockapi.io/professors/${professorId}`);
+            const response = await axios.get(`https://mockapi.io/profesores/${professorId}`);
             this.professor = response.data;
           } catch (error) {
             console.error('Error al obtener detalles del tutor: ', error);

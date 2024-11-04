@@ -5,7 +5,7 @@
     <li><router-link to= "/profesores">Buscar Profesores</router-link></li>
     <li v-if="isStudent"><router-link to ="/mis-reservas">Mis Reservas</router-link></li>
     <li v-if="isProfessor"><router-link to ="/gestionar-sesiones">Gestionar Sesiones</router-link></li>
-    <li v-if="isAdmin"><router-link to ="/admin-panel">Panel de Administración</router-link></li>
+    <li v-if="isAdmin"><router-link to ="/administrador">Panel de Administración</router-link></li>
     <li><router-link to ="/perfil">Mi Perfil</router-link></li>
     <li><button @click="logout">Cerrar Sesión</button></li>
   </ul>
