@@ -95,7 +95,7 @@ export default {
     methods: {
         async cargarEstudiantes() {
             try {
-                const response = await axios.get('https://mockapi.io/estudiante');
+                const response = await axios.get('https://672993c56d5fa4901b6d95e2.mockapi.io/api/v1/Estudiantes');
                 this.totalEstudiantes = response.data.length;
             } catch (error) {
                 console.error('Error al cargar estudiantes: ', error);
@@ -103,7 +103,7 @@ export default {
         },
         async cargarProfesores() {
             try {
-                const response = await axios.get('https://mockapi.io/profesores');
+                const response = await axios.get('https://672993c56d5fa4901b6d95e2.mockapi.io/api/v1/Profesores');
                 this.totalProfesores = response.data.length;
             } catch (error) {
                 console.error('Error al cargar profesores: ', error);
@@ -119,7 +119,7 @@ export default {
         },
         async eliminarEstudiante(studentId) {
             try {
-                await axios.delete(`https://mockapi.io/estudiante/${studentId}`);
+                await axios.delete(`https://672993c56d5fa4901b6d95e2.mockapi.io/api/v1/Estudiantes/${studentId}`);
                 this.student = this.student.filter(student => student.id !== studentId);
                 this.totalEstudiantes -= 1;
                 alert('Estudiante eliminado exitosamente');
@@ -129,7 +129,7 @@ export default {
         },
         async eliminarProfesor(professorId) {
             try {
-                await axios.delete(`https://mockapi.io/profesores/${professorId}`);
+                await axios.delete(`https://672993c56d5fa4901b6d95e2.mockapi.io/api/v1/Profesores/${professorId}`);
                 this.professor = this.professor.filter(professor => professor.id !== professorId);
                 this.totalProfesores -= 1;
                 alert('Profesor eliminado exitosamente');

@@ -27,7 +27,7 @@ export default {
     methods: {
       async obtenerProfesores() {
         try {
-            const response = await axios.get('https://mockapi.io/profesores');
+            const response = await axios.get('https://672993c56d5fa4901b6d95e2.mockapi.io/api/v1/Profesores');
             this.professors = response.data;
         } catch (error) {
             console.error('Error al obtener profesores: ', error);

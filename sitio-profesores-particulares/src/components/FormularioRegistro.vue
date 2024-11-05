@@ -49,7 +49,7 @@ export default {
                     comentarios: this.comentarios,
                 };
 
-                const responde = await axios.post('https://mockapi.io/reservas', reserva);
+                const responde = await axios.post('https://67299bee6d5fa4901b6dade2.mockapi.io/api/v1/Reservas', reserva);
                 if(response.status === 201) {
                     this.mensaje = '¡Reserva Confirmada Existosamente!';
                 } else {
